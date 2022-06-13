@@ -1,0 +1,18 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Historial de scann 
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-item *ngFor="let registro of dataLocal.historial" (click)="abrirRegistro(registro)" detail>
+        <ion-label>
+          <h2>{{registro.codigo}}</h2>
+          <p>{{registro.nombre}}</p>
+        </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
